@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const HeroContainer = styled.div`
-    background: green;
+    background: #211602;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 30px;
     height: calc(100% - 80px);
     width: 100%;
-    position: absolute;
+    position: absolute; 
     z-index: 1;
 `
 
