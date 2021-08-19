@@ -2,7 +2,7 @@ import Hero from "../components/hero";
 
 function Home() {
     return (
-        <div>
+        <div className="HeroContainer">
             <Hero />
         </div>
     )

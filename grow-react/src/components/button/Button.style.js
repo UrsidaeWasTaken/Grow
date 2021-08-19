@@ -2,11 +2,11 @@ import styled from 'styled-components'
 import { NavLink as Link } from 'react-router-dom'
 
 export const Button = styled(Link)`
-    border-radius: 50px;
+    border-radius: 80px;
     background: #211602;
     white-space: nowrap;
     color: #f5f0e6;
-    padding: 14px 48px;
+    padding: 1em 2em;
     outline: none;
     border: none;
     justify-content: center;
