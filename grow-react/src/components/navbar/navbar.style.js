@@ -3,7 +3,7 @@ import { FaBars, FaSearch } from 'react-icons/fa'
 import { NavLink as Link } from 'react-router-dom'
 
 export const Nav = styled.nav`
-    background: #211602;
+    background: #332915;
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -27,12 +27,12 @@ export const NavLink = styled(Link)`
 
 export const Bars = styled(FaBars)`
     display: none;
-    color: #211602;
+    color: #f5f0e6;
 
     @media screen and (max-width: 768px) {
-        display: block;
+        display: flex;
         position: absolute;
-        top: 0;
+        top: .17em;
         right: 0;
         transform: translate(-100%, 75%);
         font-size: 1.8rem;

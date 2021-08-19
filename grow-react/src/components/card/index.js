@@ -1,10 +1,10 @@
-import { NavLink as Link } from 'react-router-dom'
 import {
     CardContainer,
     CardImage,
     CardContent,
     CardH3,
-    CardP
+    CardP,
+    CardLink
 } from './card.style'
 
 function Card({
@@ -15,13 +15,13 @@ function Card({
     return (
         <>
             <CardContainer>
-                <Link to="/about">
+                <CardLink to="/about">
                     <CardImage backgroundImage={imageUrl}/>
                     <CardContent>
                         <CardH3>{ name }</CardH3>
-                        <CardP>£{ price }</CardP>
+                        <CardP>£{ price.toFixed(2) }</CardP>
                     </CardContent>
-                </Link>
+                </CardLink>
             </CardContainer>
         </>
     )
