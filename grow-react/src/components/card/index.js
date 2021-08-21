@@ -10,16 +10,19 @@ import {
 function Card({
     name,
     price,
-    imageUrl
+    imageUrl,
+    routeUrl
 }) {
+    price = parseFloat(price).toFixed(2)
+
     return (
         <>
             <CardContainer>
-                <CardLink to="/about">
-                    <CardImage backgroundImage={imageUrl}/>
+                <CardLink to={ routeUrl }>
+                    <CardImage backgroundImage={ imageUrl }/>
                     <CardContent>
                         <CardH3>{ name }</CardH3>
-                        <CardP>£{ price.toFixed(2) }</CardP>
+                        <CardP>£{ price }</CardP>
                     </CardContent>
                 </CardLink>
             </CardContainer>

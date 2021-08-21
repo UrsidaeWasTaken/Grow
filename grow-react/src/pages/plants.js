@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useState, useEffect } from 'react';
 import PlantList from '../components/plants';
 
 function Plants() {
@@ -8,15 +8,12 @@ function Plants() {
     useEffect(() => {
         axios.get(
             "https://localhost:44317/api/plants"
-        ).then((res) => { 
-            console.log(res.data)
-            setPlants(res.data)
-        }
-        ).catch(error => console.log(error));
+        ).then(res => setPlants(res.data)
+        ).catch(error => console.warn(error));
     }, []);
 
     return (
-        <div>
+        <div className="PlantListContainer">
             <PlantList plants={ plants }/>
         </div>
     );
