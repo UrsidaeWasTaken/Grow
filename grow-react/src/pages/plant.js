@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import PlantDetailPage from "../components/plant"
+import NotFound from "./notFound"
 
 function Plant({ match }) {
     const [plant, setPlant] = useState([])
@@ -12,11 +13,17 @@ function Plant({ match }) {
         ).catch(error => console.warn(error))
     }, [match.params.plantId])
 
-    return (
-        <div className="PlantContainer">
-            <PlantDetailPage plant={plant}/>
-        </div>
-    )
+
+    // Check that plant exists, else return Not Found
+    return (plant ? 
+        (
+            <div className="PlantContainer">
+                <PlantDetailPage plant={plant}/>
+            </div>
+        ):
+            <NotFound />
+        )
+
 }
 
 export default Plant
