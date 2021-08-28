@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { FaBars, FaSearch } from 'react-icons/fa'
 import { NavLink as Link } from 'react-router-dom'
 
 export const Nav = styled.nav`
@@ -8,7 +7,7 @@ export const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     padding: 0.5rem calc((100vw - 1000px) / 2);
-    z-index: 99;
+    z-index: 10;
 `
 
 export const NavLink = styled(Link)`
@@ -19,13 +18,9 @@ export const NavLink = styled(Link)`
     padding: 0 2rem;
     height: 100%;
     cursor: pointer;
-
-    &.active {
-    color: #f5f0e6;
-    }
 `
 
-export const Bars = styled(FaBars)`
+export const MobileIcon = styled.div`
     display: none;
     color: #f5f0e6;
 
@@ -52,7 +47,3 @@ export const NavMenu = styled.div`
     display: none;
   }
 `;
-
-export const Search = styled(FaSearch)`
-
-`

@@ -1,28 +1,25 @@
 import {
     Nav,
+    MobileIcon,
     NavLink,
-    Bars,
     NavMenu,
   } from './navbar.style';
+import { FaBars } from 'react-icons/fa'
 
-function Navbar() {
+function Navbar({ toggle }) {
     return (
-        <>
-            <Nav>
-                <NavLink to="/">
-                    <h1>GROW</h1>
-                </NavLink>
-                <Bars />
-                <NavMenu>
-                    <NavLink to="/plants" activeStyle>
-                        Plants
-                    </NavLink>
-                    <NavLink to="/about" activeStyle>
-                        About
-                    </NavLink>
-                </NavMenu>
-            </Nav>
-        </>
+        <Nav>
+            <NavLink to="/">
+                <h1>GROW</h1>
+            </NavLink>
+            <MobileIcon onClick={ toggle }>
+                <FaBars />
+            </MobileIcon>
+            <NavMenu>
+                <NavLink to="/plants">Plants</NavLink>
+                <NavLink to="/about">About</NavLink>
+            </NavMenu>
+        </Nav>
     )
 }
 
